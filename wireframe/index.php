@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <!-- Application scripts -->
+    <script src="application/script.js"></script>
     <script src="application/min/draggable-min.js"></script>
   </head>
   <body>
@@ -17,7 +18,7 @@
         <h1>Timesheet</h1>
 
         <div class="sheet">
-          <h2>Timesheets</h2>
+          <h2>Entries for <?php print date('M j, Y');?></h2>
 
           <div class="time-entry">
             <h3 class="entry-title">TICKET-31</h3>
@@ -72,9 +73,10 @@
                 <span class="quarter-hour"></span>
               </div>
             </div>
-            <input type="text" class="entry-description">
+            <label for="description">description</label>
+            <input type="text" name="description" class="entry-description" placeholder="description" size="70">
           </div>
-
+          <a href="#" class="add-entry-link">Add another entry</a>
         </div>
 
         <div class="jira-list">
@@ -87,9 +89,13 @@
             <li><a href="#">JIRATICKET-35</a></li>
           </ul>
           <p class="help">Drag issues onto the timesheet to start logging time to a new entry</p>
+          <section class="jql-search">
+            <input type="text" name="jql-statement" placeholder="Enter JQL statement" size="40" />
+            <input type="submit" value="Go" />
+          </section>
         </div>
 
-        <button>Save time</button>
+        <button class="save-sheet">Save time</button>
       </div>
     </div>
   </body>

@@ -29,10 +29,10 @@ p.help {
   padding: 2.3576515979%;
   background: #de4;
 }
-.outer-container:after {
+.outer-container::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 .outer-container .sheet {
   float: left;
@@ -59,4 +59,30 @@ p.help {
 }
 .outer-container .jira-list .ui-draggable-dragging {
   background: red;
+}
+
+.time-entry {
+  background: #eee;
+  padding: 2px;
+}
+
+.timelog .hour {
+  padding: 2px;
+  float: left;
+}
+.timelog .hour .quarter-hour {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: left;
+  height: 20px;
+  margin-left: 2px;
+  width: 12px;
+}
+.timelog .hour .quarter-hour:hover, .timelog .hour .quarter-hour.active {
+  background: red;
+}
+
+.entry-description {
+  clear: left;
+  display: block;
 }
