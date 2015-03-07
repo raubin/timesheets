@@ -1,0 +1,50 @@
+// Main stylesheet.
+// Compiles with codekit2
+
+@import "bourbon", "neat";
+
+body {
+  background: #efefef;
+}
+
+p {
+  &.help {
+    font-style: italic;
+  }
+}
+
+// main application working area
+.outer-container {
+  @include outer-container;
+  @include pad(default);
+  background: #de4;
+
+  .sheet {
+    @include span-columns(8);
+    @include pad(10px);
+    background: #ee9;
+  }
+  .jira-list {
+    @include span-columns(4);
+    @include omega();
+    @include pad(10px);
+    background: #dd1;
+
+    .ui-draggable-dragging {
+      background: red;
+    }
+  }
+}
+
+// Time entry bubbles
+.timelog {
+  .hour {
+    @include pad(5px);
+
+    .quarter-hour {
+      border: 1px solid #
+    }
+  }
+}
+
+

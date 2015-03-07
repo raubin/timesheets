@@ -1,0 +1,62 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background: #efefef;
+}
+
+p.help {
+  font-style: italic;
+}
+
+.outer-container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.3576515979%;
+  background: #de4;
+}
+.outer-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.outer-container .sheet {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 65.8807828007%;
+  padding: 10px;
+  background: #ee9;
+}
+.outer-container .sheet:last-child {
+  margin-right: 0;
+}
+.outer-container .jira-list {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 31.7615656014%;
+  margin-right: 0;
+  padding: 10px;
+  background: #dd1;
+}
+.outer-container .jira-list:last-child {
+  margin-right: 0;
+}
+.outer-container .jira-list .ui-draggable-dragging {
+  background: red;
+}
